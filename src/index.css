@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-emerald-deep: #0D5C3A;
+  --color-emerald-deep-hover: #074128;
+  --color-emerald-deep-light: #E7F6EF;
+  --color-ice-white: #F4F7F5;
+  --color-ice-white-dark: #E1E8E4;
+  --color-deep-gray: #0B0F0D;
+  --color-warm-slate: #151B17;
+  --color-text-body: #1E2522;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* Custom CSS variables for ultra-flexible main color toggle if required */
+:root {
+  --primary-rgb: 13, 92, 58; /* #0D5C3A */
+}
+
+/* Base custom interactive effects */
+.hover-lift {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Form inputs styling */
+.glass-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(13, 92, 58, 0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-input:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: #0D5C3A;
+  box-shadow: 0 0 0 3px rgba(13, 92, 58, 0.15);
+}
+
+/* Custom grid decorations */
+.grid-bg {
+  background-image: radial-gradient(rgba(13, 92, 58, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dark .grid-bg {
+  background-image: radial-gradient(rgba(231, 246, 239, 0.03) 1px, transparent 1px);
+}

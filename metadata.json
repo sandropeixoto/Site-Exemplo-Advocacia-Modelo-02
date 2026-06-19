@@ -1,0 +1,6 @@
+{
+  "name": "Apex Advocacia de Elite",
+  "description": "Landing page institucional moderna de alta conversão para escritórios de advocacia, com foco em agendamentos céleres, áreas de atuação e painel integrado de leads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
